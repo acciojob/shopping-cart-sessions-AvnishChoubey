@@ -40,7 +40,7 @@ function renderCart() {
 function addToCart(productId) {
 	const product = products.find(p => p.id === productId);
   
-	if (!product || cart.some(item => item.id === productId)) return;
+	if (!product) return;
 	
 	cart.push(product);
 	renderCart();
